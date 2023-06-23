@@ -1,0 +1,5 @@
+Package: opsel
+Version: 1.0
+Architecture: amd64
+Maintainer: Shyamin Ayesh <shyamin@avanciro.com>
+Description: Opsel API
