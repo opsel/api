@@ -49,6 +49,12 @@ func main() {
 	Router.Use(middleware.CORS())
 
 	/**
+	* Initialize gorm ORM instance and inject it to the main
+	* gin application to use in the controllers.
+	 */
+	Router.Use(middleware.Database())
+
+	/**
 	* Extend the capabilities of the Validator engine to return
 	* JSON tag name when we query for Field instead of the Struct
 	* field name
