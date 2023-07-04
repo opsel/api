@@ -2,9 +2,17 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+
+	Gather_Controller "opsel/controllers/gather"
+	"opsel/middleware"
 )
 
 func Routes(Router *gin.Engine) {
+
+	Routes_Gather := Router.Group("/gather")
+	{
+		Routes_Gather.POST("/processor", middleware.Gather(), Gather_Controller.Processor)
+	}
 
 	/**
 	* We have to define ping route to get health information about
